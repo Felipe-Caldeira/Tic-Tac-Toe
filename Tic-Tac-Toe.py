@@ -118,7 +118,12 @@ def can_Win(player): #Checks if (player) has 2-in-a-row
           
 def player_Move(mark): #Player's turn 
     while True:
-        move = input("Select a spot: ")
+        while True:
+            try:
+                move = int(input("Select a spot: "))
+                break
+            except ValueError:
+                print("Input an available number from the board.")
         if int(move) not in board:
             print("Number out of range. Choose an available spot on the board.")
             continue
