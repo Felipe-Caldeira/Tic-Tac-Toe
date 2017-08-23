@@ -244,8 +244,9 @@ if gamemode == 'PvC':
                 break
             player_Turn('X', 'Player')
             if win_Check() == True:
-                show_Board()
+                os.system('cls')
                 print("You won the game!")
+                show_Board()
                 break
             
 if gamemode == 'PvP':
